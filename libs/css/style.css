@@ -14,7 +14,7 @@ body {
   max-height: 100vh;
   font-family: 'Orbitron', sans-serif;
   color: #f5f5f5;
-  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url('/assets/images/nightmode-pexels-stein-egil-liland.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url('https://brookscode.com/meteorproject/assets/images/nightmode-pexels-stein-egil-liland.jpg');
 }
 
 .overlay {
@@ -89,9 +89,18 @@ body {
   border-collapse: collapse;
 }
 
+.table-head {
+  text-align: left;
+  position: sticky;
+  top: 0; 
+  background-color: #010101;
+  z-index: 2; 
+}
+
+
 .table-head th {
   text-align: left;
-  padding: 8px;
+  padding: 20px 10px;
   border: 1px solid #f5f5f5;
 }
 
@@ -111,8 +120,12 @@ body {
 
 .table-pagination {
   text-align: center;
-  margin: 20px 0;
-  text-align: fixed;
+  position: sticky;
+  bottom: 0; 
+  padding: 10px 0;
+  background-color: #010101;
+  z-index: 2; 
+  border-top: 1px solid #f5f5f5;
 }
 
 .prev-page,
@@ -374,7 +387,7 @@ button#mybtn, #tableMapBtn {
 }
 
 .day-mode {
-  background-image: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1)),url('/assets/images/daymode-pexels-eberhard-grossgasteiger.jpg');
+  background-image: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1)),url('https://brookscode.com/meteorproject/assets/images/daymode-pexels-eberhard-grossgasteiger.jpg');
   background-position: center top;
   color: #010101;
 }
@@ -403,6 +416,15 @@ button#mybtn, #tableMapBtn {
   font-weight: bold;
 }
 
+.day-mode .table-head th, .day-mode .table-pagination {
+  background-color: #bedfff;
+  color: #010101;
+}
+
+.day-mode .table-pagination {
+  border-top: 1px solid #010101;
+}
+
 .day-mode .table-pagination button {
   background: #f5f5f5;
 }
@@ -417,7 +439,7 @@ button#mybtn, #tableMapBtn {
 
 .day-mode .prev-page,
 .day-mode .next-page {
-  background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  background-color: #f5f5f5;
   color: #010101;
   border: 1.5px solid #010101;
   border-radius: 10px;

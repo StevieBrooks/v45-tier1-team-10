@@ -123,7 +123,7 @@ L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
 
 /*==================LOGIC FOR TABLE====================*/
 
-const itemsPerPage = 10;
+const itemsPerPage = 50;
 
 let resultsTableBody = document.querySelector(".results-table .table-body");
 const prevPageButton = document.querySelector(".prev-page");
@@ -143,6 +143,7 @@ function updatePagination() {
   }
 
 function renderTable(page) {
+
     resultsTableBody.innerHTML = ""; 
     // console.log(finalItems);
   
@@ -177,8 +178,9 @@ function renderTable(page) {
     }
   
     currPage.textContent = `Page ${currentPage}`;
+
     updatePagination();
-  }
+}
   
   function prevPage() {
     if (currentPage > 1) {
